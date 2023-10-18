@@ -1,36 +1,21 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        int array[] = {2,4,5,68};
+        Scanner scanner = new Scanner(System.in);
 
-//        for(int i=0; i<array.length; i++){
-//            System.out.println(array[i]);
-//        }
+        System.out.print("Informe a quantidade de jogos:");
+        int jogos = scanner.nextInt();
 
-//        for(int i: array){
-//            System.out.println(i);
-//            //Não funciona pois o i é somente iterador
-//            i++;
-//        }
+        int matriz[][] = new int[jogos][];
 
-//        String array2[] = new String[10];
-//
-//        for(String i: array2){
-//            System.out.println(i);
-//        }
-
-        int matriz[][] = new int[3][];
-        matriz[0] = new int[4];
-        matriz[1] = new int[3];
-        matriz[2] = new int[5];
-
-        for(int i[]: matriz){
-            for(int j: i){
-                System.out.print(j + " ");
+        if(jogos>0){
+            for(int i=0; i<jogos;i++){
+                System.out.println("Informe a quantidade de números do jogo "+i+":");
+                int tamanho = scanner.nextInt();
+                matriz[i] = new int[tamanho];
             }
-            System.out.println("");
         }
 
     }
