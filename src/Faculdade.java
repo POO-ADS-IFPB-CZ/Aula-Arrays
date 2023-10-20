@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Faculdade {
 
     private int codigo;
@@ -29,10 +31,11 @@ public class Faculdade {
     }
 
     public Aluno[] getAlunos() {
-        return alunos;
+        return Arrays.copyOf(alunos, quantidadeAlunos);
     }
 
     public boolean addAluno(Aluno aluno){
+        //TODO: Tratar os erros: aluno já existe, aluno nulo, limite array...
         alunos[quantidadeAlunos++] = aluno;
         return true;
     }
