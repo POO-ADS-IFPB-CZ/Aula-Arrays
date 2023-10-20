@@ -1,4 +1,4 @@
-public class Aluno {
+public class Aluno implements Comparable<Aluno> {
 
     private int matricula;
     private String cpf;
@@ -52,5 +52,11 @@ public class Aluno {
                 ", nome='" + nome + '\'' +
                 ", curso='" + curso + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Aluno o) {
+//        return matricula - o.matricula;
+        return nome.compareTo(o.nome);
     }
 }
